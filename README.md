@@ -5,6 +5,7 @@ Custom Hermes Agent image based on `nousresearch/hermes-agent` with extra CLI to
 - `age`, `sops` — secrets encryption/decryption
 - `himalaya` — email CLI
 - `git`, `jq`, `ripgrep`, `curl`, `gnupg`
+- `libopus` — Discord voice channel playback (opus codec for the Hermes gateway)
 - `sudo`, with passwordless sudo for the `hermes` user
 
 Installing the tools in the image (instead of inside a running container) means they survive container recreation and upstream upgrades. Hermes data stays on the host through the `/opt/data` bind mount. The upstream entrypoint is unchanged, so `HERMES_UID`/`HERMES_GID`, Docker socket group setup, and the privilege drop to `hermes` all behave as they do upstream.

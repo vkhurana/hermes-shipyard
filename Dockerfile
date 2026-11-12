@@ -19,6 +19,7 @@ RUN set -eux; \
         git \
         gnupg \
         jq \
+        libopus0 \
         ripgrep \
         sudo; \
     case "${TARGETARCH:-amd64}" in \
